@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 100;
+  background-color: #fff;
+}
+#header .logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#header .check-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.design-date,
+.dev-address,
+.pub-date {
+  display: none;
+}
+
+.design-date.active,
+.dev-address.active,
+.pub-date.active {
+  display: block;
+}
+
+#header .btn-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#header .btn-wrap .btn {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.guide-wrap {
+  height: 100%;
+  padding: 110px 20px 20px;
+  background-color: #f4f4f4;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.guide-table {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.guide-table th,
+.guide-table td {
+  border: 1px solid #ccc;
+  border-left: 0;
+  padding: 5px 10px;
+}
+
+.guide-table th:last-child,
+.guide-table td:last-child {
+  border-right: 0;
+}
+
+.guide-table th {
+  background-color: #f4f4f4;
+}
+
+.guide-table tbody td:nth-child(2) {
+  text-align: left;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.btn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: #326fe1;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn + .btn {
+  margin-left: 0;
+}
+
+.guide-list {
+  margin: 20px 0 10px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.guide-list .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.guide-list .list .item {
+  width: 100%;
+}
+
+@media all and (max-width: 1000px) {
+  .guide-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media all and (max-width: 800px) {
+  .guide-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media all and (max-width: 640px) {
+  .guide-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media all and (max-width: 480px) {
+  .guide-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}/*# sourceMappingURL=pub-list.css.map */

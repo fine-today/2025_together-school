@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../common/js/jquery.min.js"></script>
+    <script src="../common/js/plugins.min.js"></script>
+    <!-- <script src="../common/js/index.js"></script> -->
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="banner">
+        <a href="#n">
+          <img
+            src="https://www.togetherschool.go.kr/upload/popupbanner/277e01f0b8e94ac4bd3275da5ba98e3e.png"
+            alt=""
+          />
+        </a>
+        <button type="button" class="close">닫기</button>
+      </div>
+      <header class="header" id="header"></header>
+      <main class="content" id="content"></main>
+      <footer class="footer" id="footer"></footer>
+    </div>
+    <script>
+      $(".header").load("./include/header.html");
+    </script>
+  </body>
+</html>

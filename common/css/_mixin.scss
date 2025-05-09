@@ -1,0 +1,64 @@
+@use "sass:map";
+
+@mixin tablet {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin hidden {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px);
+}
+
+@mixin shadow($depth: 1) {
+  @if ($depth == 1) {
+    box-shadow: 0 0.1rem rgba(0, 0, 0, 0.25);
+  }
+}
+
+@mixin ellipsis($line: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if ($line == 1) {
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin flexbox {
+  display: flex;
+  align-items: center;
+}
+
+/* typo */
+@mixin h1($size: lg) {
+}
+@mixin h2($size: lg) {
+}
+@mixin h3($size: lg) {
+}
+@mixin h4($size: sm) {
+}
+@mixin h5($size: sm) {
+}
+@mixin h6($size: sm) {
+}
+
+@mixin p() {
+}
