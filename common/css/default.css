@@ -5,43 +5,57 @@
   font-family: "Pretendard";
   font-weight: 900;
   font-display: swap;
-  src: local("Pretendard ExtraBold"), url(../fonts/pretendard/Pretendard-ExtraBold.subset.woff2) format("woff2"), url(../fonts/pretendard/retendard-ExtraBold.subset.woff) format("woff");
+  src: local("Pretendard ExtraBold"),
+    url(../fonts/pretendard/Pretendard-ExtraBold.subset.woff2) format("woff2"),
+    url(../fonts/pretendard/retendard-ExtraBold.subset.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 800;
   font-display: swap;
-  src: local("Pretendard Bold"), url(../fonts/pretendard/Pretendard-Bold.subset.woff2) format("woff2"), url(../fonts/pretendard/retendard-Bold.subset.woff) format("woff");
+  src: local("Pretendard Bold"),
+    url(../fonts/pretendard/Pretendard-Bold.subset.woff2) format("woff2"),
+    url(../fonts/pretendard/retendard-Bold.subset.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 700;
   font-display: swap;
-  src: local("Pretendard SemiBold"), url(../fonts/pretendard/Pretendard-SemiBold.subset.woff2) format("woff2"), url(../fonts/pretendard/retendard-SemiBold.subset.woff) format("woff");
+  src: local("Pretendard SemiBold"),
+    url(../fonts/pretendard/Pretendard-SemiBold.subset.woff2) format("woff2"),
+    url(../fonts/pretendard/retendard-SemiBold.subset.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 600;
   font-display: swap;
-  src: local("Pretendard Medium"), url(../fonts/pretendard/Pretendard-Medium.subset.woff2) format("woff2"), url(../fonts/pretendard/retendard-Medium.subset.woff) format("woff");
+  src: local("Pretendard Medium"),
+    url(../fonts/pretendard/Pretendard-Medium.subset.woff2) format("woff2"),
+    url(../fonts/pretendard/retendard-Medium.subset.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 500;
   font-display: swap;
-  src: local("Pretendard Regular"), url(../fonts/pretendard/Pretendard-Regular.subset.woff2) format("woff2"), url(../fonts/pretendard/retendard-Regular.subset.woff) format("woff");
+  src: local("Pretendard Regular"),
+    url(../fonts/pretendard/Pretendard-Regular.subset.woff2) format("woff2"),
+    url(../fonts/pretendard/retendard-Regular.subset.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
   font-display: swap;
-  src: local("Pretendard Light"), url(../fonts/pretendard/Pretendard-Light.subset.woff2) format("woff2"), url(../fonts/pretendard/retendard-Light.subset.woff) format("woff");
+  src: local("Pretendard Light"),
+    url(../fonts/pretendard/Pretendard-Light.subset.woff2) format("woff2"),
+    url(../fonts/pretendard/retendard-Light.subset.woff) format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 300;
   font-display: swap;
-  src: local("Pretendard ExtraLight"), url(../fonts/pretendard/Pretendard-ExtraLight.subset.woff2) format("woff2"), url(../fonts/pretendard/retendard-ExtraLight.subset.woff) format("woff");
+  src: local("Pretendard ExtraLight"),
+    url(../fonts/pretendard/Pretendard-ExtraLight.subset.woff2) format("woff2"),
+    url(../fonts/pretendard/retendard-ExtraLight.subset.woff) format("woff");
 }
 :root {
   --c-white: #fff;
@@ -158,7 +172,9 @@ a:active {
   text-decoration: none;
 }
 
-.header a:visited, .header a:focus, .header a:active,
+.header a:visited,
+.header a:focus,
+.header a:active,
 .content a:visited,
 .content a:focus,
 .content a:active,
@@ -385,42 +401,46 @@ button,
 input {
   overflow: visible;
 }
+button {
+  border: 0;
+  background-color: transparent;
+}
 
-input[type=search],
-input[type=text] {
+input[type="search"],
+input[type="text"] {
   border-radius: 0;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-input[type=search] {
+input[type="search"] {
   outline-offset: -2px;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-input[type=search]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
-input[type=file] {
+input[type="file"] {
   border: none;
 }
 
-input[type=file]::-webkit-file-upload-button {
+input[type="file"]::-webkit-file-upload-button {
   font: inherit;
   -webkit-appearance: button;
-          appearance: button;
+  appearance: button;
   border: 1px solid #bbb;
   background: #e0e0e0;
   box-shadow: none;
 }
 
-input[type=checkbox],
-input[type=radio] {
+input[type="checkbox"],
+input[type="radio"] {
   padding: 0;
   border: none;
 }
@@ -430,9 +450,9 @@ select {
   text-transform: none;
 }
 
-[type=button],
-[type=reset],
-[type=submit],
+[type="button"],
+[type="reset"],
+[type="submit"],
 button {
   overflow: visible;
   cursor: pointer;
@@ -466,7 +486,8 @@ select:disabled {
 }
 html,
 body {
-  font-family: "pretendard", "NotoKr", "Malgun Gothic", "맑은 고딕", Dotum, "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
+  font-family: "pretendard", "NotoKr", "Malgun Gothic", "맑은 고딕", Dotum,
+    "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
   font-size: 10px;
   margin: 0;
   padding: 0;
@@ -476,13 +497,16 @@ body {
 }
 
 .eng body {
-  font-family: "HafferSQ", "pretendard", "NotoKr", "Malgun Gothic", "맑은 고딕", Dotum, "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
+  font-family: "HafferSQ", "pretendard", "NotoKr", "Malgun Gothic", "맑은 고딕",
+    Dotum, "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
 }
 .eng body #content {
-  font-family: "pretendard", "NotoKr", "Malgun Gothic", "맑은 고딕", Dotum, "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
+  font-family: "pretendard", "NotoKr", "Malgun Gothic", "맑은 고딕", Dotum,
+    "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
 }
 .eng body #content .content-header {
-  font-family: "HafferSQ", "pretendard", "NotoKr", "Malgun Gothic", "맑은 고딕", Dotum, "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
+  font-family: "HafferSQ", "pretendard", "NotoKr", "Malgun Gothic", "맑은 고딕",
+    Dotum, "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
 }
 
 .padding0 {
@@ -1570,7 +1594,7 @@ body {
   min-height: 1px;
 }
 
-[dir=rtl] .slick-slide {
+[dir="rtl"] .slick-slide {
   float: right;
 }
 
@@ -1753,7 +1777,7 @@ html.popup-open body {
 }
 .popup.archive-pop .pop-wrap .pop-slide img {
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   max-width: 100%;
   height: 100%;
   max-height: 100%;
@@ -1803,4 +1827,4 @@ html.popup-open body {
     right: 10px;
     left: auto;
   }
-}/*# sourceMappingURL=default.css.map */
+} /*# sourceMappingURL=default.css.map */
