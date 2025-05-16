@@ -1,0 +1,59 @@
+@charset "UTF-8";
+@import "./common.css";
+@import "./layout.css";
+/*===== 변수 =====*/
+/*===== 반응형 media-query =====*/
+/* typo */
+.gnb .login-box .login-item .login-anchor.btn {
+  display: none;
+}
+
+@media (min-width: 1281px) {
+  .gnb .wrap {
+    justify-content: flex-end;
+  }
+  .gnb .log {
+    display: none;
+  }
+  .menu-box .wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .menu-box .logo {
+    order: 1;
+    width: auto;
+  }
+  .menu-box .btn-wrap {
+    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .menu-box .btn-wrap .search-wrap .input-wrap {
+    width: 200px;
+    height: 26px;
+    padding: 5px 10px 5px 10px;
+    background-color: #fff;
+  }
+  .menu-box .btn-wrap .search-wrap .input-wrap .input input[type=text] {
+    height: 20px;
+  }
+  .menu-box .btn-wrap .search-wrap .input-wrap .search-btn {
+    width: 24px;
+    height: 24px;
+  }
+  .menu-box .btn-wrap .search-wrap .input-wrap .search-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  .menu-box .menu {
+    flex: 1;
+  }
+  .menu-box .menu .depth1-list {
+    width: 100%;
+  }
+}/*# sourceMappingURL=sub.css.map */

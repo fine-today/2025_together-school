@@ -1,0 +1,70 @@
+@use "./_mixin" as *;
+@import "./common.css";
+@import "./layout.css";
+
+.gnb {
+  .login-box {
+    .login-item .login-anchor.btn {
+      display: none;
+    }
+  }
+}
+@include only-pc {
+  .gnb {
+    .wrap {
+      justify-content: flex-end;
+    }
+    .log {
+      display: none;
+    }
+  }
+  .menu-box {
+    .wrap {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+    .logo {
+      order: 1;
+      width: auto;
+    }
+    .btn-wrap {
+      width: auto;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 8px;
+      margin-top: 0;
+      margin-bottom: 0;
+      .search-wrap {
+        .input-wrap {
+          width: 200px;
+          height: 26px;
+          padding: 5px 10px 5px 10px;
+          background-color: #fff;
+          .input {
+            input[type="text"] {
+              height: 20px;
+            }
+          }
+          .search-btn {
+            width: 24px;
+            height: 24px;
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+    .menu {
+      flex: 1;
+      .depth1-list {
+        width: 100%;
+      }
+      .depth1-item .depth1-anchor {
+      }
+    }
+  }
+}
