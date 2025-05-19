@@ -1,3 +1,5 @@
+@import "_mixin.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -9,18 +11,22 @@ body {
   height: 100%;
 }
 body {
+  display: grid;
+  grid-template-areas: "header" "content";
+  grid-template-rows: 60px 1fr;
 }
+
 #header {
+  grid-area: header;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  left: 0;
-  top: 0;
   width: 100%;
   padding: 20px;
   z-index: 100;
-  background-color: #fff;
+  height: 60px;
+  @include color(background-color, white);
+  position: relative;
   .logo {
     position: absolute;
     left: 50%;
@@ -44,22 +50,64 @@ body {
   font-size: 16px;
 }
 .guide-wrap {
+  grid-area: content;
   position: relative;
-  display: block;
+  display: grid;
+  grid-template-areas: "list" "view";
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 1fr;
+  overflow: auto;
   font-size: 0;
   line-height: 0;
   // height: 100%;
-  padding: 110px 20px 20px;
-  background-color: #f4f4f4;
+  @include color(background-color, bg01);
   .guide-list-wrap {
     display: inline-block;
-    width: 300px;
+    position: relative;
+    //width: 300px;
     vertical-align: top;
+    padding: 20px;
+    overflow: auto;
+    border-right: 1px solid #ddd;
+    background-color: #eee;
   }
   .guide-view-wrap {
     display: inline-block;
-    width: calc(100% - 300px);
+    //width: calc(100% - 300px);
     vertical-align: top;
+    padding: 20px;
+    overflow: auto;
+  }
+}
+.tree-ctrl {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: flex-end;
+  margin: -10px -10px 5px;
+  .tree-btn {
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    line-height: 16px;
+    border: 1px solid #333;
+    padding: 4px;
+    border-radius: 4px;
+    i {
+      width: 16px;
+      height: 16px;
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &.active {
+      background-color: #333;
+      color: #fff;
+      font-weight: 700;
+    }
   }
 }
 h2 {
@@ -67,6 +115,34 @@ h2 {
   font-weight: 700;
   padding: 5px 0 0;
 }
+
+.guide-icons {
+  .guide-icon-list {
+    display: flex;
+    gap: 10px;
+  }
+  .icon-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    flex-wrap: wrap;
+    gap: 4px;
+    position: relative;
+
+    i {
+      height: 16px;
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    .label {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}
+
 .guide-table {
   font-size: 14px;
   line-height: 1.5;
@@ -110,15 +186,15 @@ a {
 }
 .guide-list-wrap {
   .guide-list {
-    margin: 5px 0;
+    margin: 5px 0 5px 5px;
     position: relative;
     &::before {
       display: block;
       position: absolute;
       left: -1px;
-      bottom: 10px;
+      bottom: 14px;
       width: 1px;
-      height: calc(100% - 10px);
+      height: calc(100% - 15px);
       border-left: 1px dashed #bbb;
       content: "";
     }
@@ -130,17 +206,64 @@ a {
       padding-bottom: 2px;
       .depth-anchor {
         font-size: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+        align-items: center;
+        line-height: 20px;
         cursor: pointer;
+        gap: 5px;
+        i {
+          height: 20px;
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+      &.active {
+        &:not(.has) {
+          > .depth-anchor {
+            font-weight: 700;
+            color: #326fe1;
+            i svg {
+              path,
+              rect {
+                stroke: #326fe1;
+                fill: #326fe1;
+              }
+            }
+          }
+        }
+        &.has {
+          > .depth-anchor {
+            font-weight: 700;
+          }
+        }
       }
       &::before {
         display: block;
         position: absolute;
         content: "";
         left: 0;
-        bottom: calc(50% - 2px);
+        top: 11px;
         width: 8px;
-        height: 8px;
+        height: 1px;
         border-bottom: 1px dashed #bbb;
+      }
+    }
+    .depth-list {
+      position: relative;
+      margin-left: 8px;
+      &::before {
+        display: block;
+        position: absolute;
+        left: -1px;
+        bottom: 13px;
+        width: 1px;
+        height: calc(100% - 10px);
+        border-left: 1px dashed #bbb;
+        content: "";
       }
     }
   }
@@ -164,6 +287,12 @@ a {
       }
       td {
         background-color: #fff;
+      }
+      .name-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        align-items: center;
       }
     }
   }
@@ -192,6 +321,30 @@ a {
       height: 900px;
       border: 1px solid #999;
       transition: all 0.2s;
+    }
+  }
+}
+
+#mode {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  gap: 5px;
+  width: 80px;
+  .mode-btn {
+    width: 100%;
+    height: 32px;
+    display: block;
+    font-size: 12px;
+    line-height: 1;
+    padding: 4px 10px;
+    background-color: #ddd;
+    font-weight: 500;
+    &.active {
+      background-color: #333;
+      color: #fff;
     }
   }
 }

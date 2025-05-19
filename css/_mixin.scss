@@ -68,3 +68,50 @@ $SCREEN_ONLY_PC: 1281px;
 
 @mixin p() {
 }
+
+// DARK_MODE 적용
+
+$colors: (
+  primary: (
+    white: #fff,
+    black: #000,
+    brand1: #01b68d,
+    brand2: #03096e,
+    gray04: #f4f4f4,
+    bg01: #f4f4f4,
+  ),
+  dark: (
+    white: #000,
+    black: #fff,
+    brand1: #03096e,
+    brand2: #01b68d,
+    gray04: #333,
+    bg01: #222,
+  ),
+  mode1: (
+    white: #222,
+    black: #001100,
+    brand1: #01b68d,
+    brand2: #333,
+    gray04: #222,
+    bg01: #03096e,
+  ),
+);
+
+@function set_color($key, $type: "primary") {
+  @each $name, $color in map-get($colors, $type) {
+    @if ($key == $name) {
+      @return $color;
+    }
+  }
+}
+
+@mixin color($property, $color, $important: false) {
+  #{$property}: set_color($color) #{if($important, "!important", "")};
+  @at-root body[data-theme="dark"] & {
+    #{$property}: set_color($color, dark) #{if($important, "!important", "")};
+  }
+  @at-root body[data-theme="mode1"] & {
+    #{$property}: set_color($color, mode1) #{if($important, "!important", "")};
+  }
+}

@@ -11,11 +11,11 @@
   </head>
   <body>
     <header id="header">
-      <div class="btn-wrap"></div>
+      <!-- <div class="btn-wrap"></div> -->
       <a href="/" class="logo">
         <img src="./images/common/logo-ani.gif" alt="" style="width: 100px"
       /></a>
-      <div class="check-wrap">
+      <!-- <div class="check-wrap">
         <span class="input">
           <input type="checkbox" id="check1" />
           <label for="check1">디자인 완료일</label>
@@ -28,11 +28,42 @@
           <input type="checkbox" id="check3" />
           <label for="check3">퍼블 완료일</label>
         </span>
+      </div> -->
+
+      <div class="guide-icons">
+        <ul class="guide-icon-list">
+          <li class="icon-item" data-status="folder-open">
+            <i></i> <span class="label">카테고리 열림</span>
+          </li>
+          <li class="icon-item" data-status="folder-close">
+            <i></i> <span class="label">카테고리 닫힘</span>
+          </li>
+          <li class="icon-item" data-status="empty">
+            <i></i> <span class="label">진행 대기</span>
+          </li>
+          <li class="icon-item" data-status="loading">
+            <i></i> <span class="label">진행중</span>
+          </li>
+          <li class="icon-item" data-status="colmplete">
+            <i></i> <span class="label">완료</span>
+          </li>
+        </ul>
       </div>
     </header>
 
     <div class="guide-wrap">
-      <div class="guide-list-wrap"></div>
+      <div class="guide-list-wrap">
+        <div class="tree-ctrl">
+          <button type="button" class="tree-btn" data-status="close">
+            <i></i>
+            전체 닫힘
+          </button>
+          <button type="button" class="tree-btn" data-status="open">
+            <i></i>
+            전체 열림
+          </button>
+        </div>
+      </div>
       <div class="guide-view-wrap">
         <div class="view-info">
           <table>
@@ -48,12 +79,6 @@
                 <td class="menu-name"></td>
                 <th>타입</th>
                 <td class="menu-type"></td>
-              </tr>
-              <tr>
-                <th>디자인 상태</th>
-                <td class="menu-design"></td>
-                <th>퍼블 상태</th>
-                <td class="menu-pub"></td>
               </tr>
               <tr>
                 <th>비고</th>
@@ -161,10 +186,32 @@
           </button>
         </div>
         <div class="viewer">
-          <iframe src="" frameborder="0" id="pub-viewer"></iframe>
+          <iframe
+            src="./pages/guide/policy.html"
+            frameborder="0"
+            id="pub-viewer"
+          ></iframe>
         </div>
       </div>
     </div>
+
+    <div id="mode">
+      <button type="button" class="mode-btn" data-mode="default">
+        DEFAULT
+      </button>
+      <button type="button" class="mode-btn" data-mode="dark">DARK</button>
+      <button type="button" class="mode-btn" data-mode="mode1">MODE1</button>
+      <!--<button type="button" class="mode-btn" data-mode="mode2">MODE2</button>
+      <button type="button" class="mode-btn" data-mode="mode3">MODE3</button>-->
+    </div>
+
+    <script>
+      $(".mode-btn").on("click", function () {
+        var $this = $(this);
+        $this.addClass("active").siblings().removeClass("active");
+        $("body").attr("data-theme", $this.attr("data-mode"));
+      });
+    </script>
 
     <script src="./js/pubLists.js"></script>
   </body>
