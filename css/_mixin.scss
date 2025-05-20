@@ -58,15 +58,38 @@ $SCREEN_ONLY_PC: 1281px;
 @mixin h2($size: lg) {
 }
 @mixin h3($size: lg) {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 30px;
+  color: #008ff5;
 }
 @mixin h4($size: sm) {
+  margin-top: 21px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  line-height: 28px;
+  color: #161270;
 }
 @mixin h5($size: sm) {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #414a73;
 }
 @mixin h6($size: sm) {
+  margin-top: 15px;
+  margin-bottom: 11px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #888da6;
 }
 
-@mixin p() {
+@mixin subTitle {
+  font-size: 17px;
+  color: #888da6;
+  margin-left: 10px;
 }
 
 // DARK_MODE 적용
@@ -77,6 +100,7 @@ $colors: (
     black: #000,
     brand1: #01b68d,
     brand2: #03096e,
+    gray-9: #999,
     gray04: #f4f4f4,
     bg01: #f4f4f4,
   ),
@@ -85,6 +109,7 @@ $colors: (
     black: #fff,
     brand1: #03096e,
     brand2: #01b68d,
+    gray-9: #555,
     gray04: #333,
     bg01: #222,
   ),
@@ -93,6 +118,7 @@ $colors: (
     black: #001100,
     brand1: #01b68d,
     brand2: #333,
+    gray-9: #999,
     gray04: #222,
     bg01: #03096e,
   ),

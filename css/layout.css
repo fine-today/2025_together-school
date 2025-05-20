@@ -2,11 +2,6 @@
 /*===== 변수 =====*/
 /*===== 반응형 media-query =====*/
 /* typo */
-.container {
-  display: grid;
-  grid-template-areas: "header-banner" "header" "footer";
-}
-
 .header-banner {
   grid-area: header-banner;
   height: 90px;
@@ -110,6 +105,10 @@
 }
 
 @media (min-width: 1281px) {
+  .main .wrapper {
+    display: grid;
+    grid-template-areas: "header-banner" "header" "footer";
+  }
   .menu-box {
     flex-wrap: wrap;
   }
@@ -221,7 +220,7 @@
     position: absolute;
   }
 }
-.content {
+.container {
   min-height: 100vh;
 }
 

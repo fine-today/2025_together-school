@@ -1,6 +1,7 @@
 @use "./_mixin" as *;
 @import "./common.css";
 @import "./layout.css";
+@import "./guide.css";
 
 .gnb {
   .login-box {
@@ -64,6 +65,266 @@
         width: 100%;
       }
       .depth1-item .depth1-anchor {
+      }
+    }
+  }
+
+  .sub {
+    .wrapper {
+      display: grid;
+      grid-template-areas: "header" "content" "footer";
+    }
+    .menu-box {
+      .wrap {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .logo {
+      }
+    }
+    .content {
+      grid-area: content;
+    }
+  }
+  .container {
+    .sub-header {
+      .breadcrumb-box {
+        @include color(background-color, brand2);
+        .breadcrumb-list {
+          display: flex;
+          height: 50px;
+          align-items: center;
+        }
+      }
+      .breadcumb-item {
+        position: relative;
+        &.home {
+          .breadcrumb-anchor {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            font-size: 0;
+            line-height: 0;
+            padding: 0;
+            @include color(background-color, black);
+            svg {
+              width: 24px;
+              height: 24px;
+              rect,
+              path {
+                @include color(fill, white);
+              }
+            }
+          }
+        }
+        &.depth1 {
+          display: inline-flex;
+          align-items: center;
+          &::after {
+            display: inline-block;
+            width: 1px;
+            height: 20px;
+            @include color(background-color, white);
+          }
+        }
+        .breadcrumb-anchor,
+        .breadcrumb-btn {
+          display: flex;
+          align-items: center;
+          @include color(color, white);
+          padding: 13px 20px;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 24px;
+        }
+        .breadcrumb-btn {
+          width: inherit;
+          @include color(color, white);
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          .arrow {
+            margin-left: 10px;
+          }
+        }
+        .breadcrumb-panel {
+          display: none;
+          @include color(color, white);
+          position: absolute;
+          @include color(background-color, brand2);
+
+          .breadcrumb-panel-wrap {
+          }
+          .panel-list {
+          }
+          .panel-item {
+            .panel-anchor {
+              min-width: 150px;
+              display: block;
+              padding: 15px 30px 15px 20px;
+              font-size: 20px;
+              font-weight: 600;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+      .sub-visual {
+        height: 250px;
+        .wrap {
+          height: inherit;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          .title {
+            font-size: 48px;
+            line-height: 1.5;
+            font-weight: 800;
+            @include color(color, brand2);
+          }
+          p {
+            margin-top: 10px;
+            font-size: 30px;
+            line-height: 1.5;
+            font-weight: 600;
+            @include color(color, brand2);
+          }
+        }
+      }
+    }
+
+    .content-box {
+      > .wrap {
+        display: grid;
+        grid-template-areas: "search-box search-box" "side-menu content";
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto 1fr;
+        grid-gap: 40px 50px;
+      }
+    }
+    .search-box {
+      grid-area: search-box;
+      .search-box-wrap {
+        @include color(background-color, gray04);
+        border-radius: 8px;
+        padding: 20px 80px;
+        border: 1px solid #ddd;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .search-form,
+      .search-keyword,
+      .search-detail {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .search-form {
+        .input {
+          position: relative;
+          select,
+          input {
+            width: 100%;
+          }
+          &:has(select) {
+            width: 120px;
+          }
+          &:has(input[type="text"]) {
+            flex: 1;
+          }
+          .search-btn {
+            position: absolute;
+            right: 10px;
+            top: calc(50% - 12px);
+            svg {
+              width: 24px;
+              height: 24px;
+              rect,
+              path {
+                @include color(stroke, brand2);
+              }
+            }
+          }
+        }
+      }
+      .search-keyword {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        .keyword {
+          font-size: 18px;
+          @include color(color, gray-9);
+        }
+      }
+      .search-detail {
+        display: none;
+        .search-detail-wrap {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-top: 1px solid #ddd;
+          margin-top: 20px;
+          padding-top: 20px;
+          h4.title {
+            margin: 0 20px 0 0;
+          }
+        }
+      }
+    }
+    .side-menu {
+      grid-area: side-menu;
+      .side-wrap {
+      }
+      .side-title {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        position: relative;
+        align-items: center;
+        font-size: 32px;
+        &::after {
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: #ddd;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+      .side-menu-box {
+      }
+      .menu-list {
+        padding-top: 20px;
+      }
+      .menu-item {
+        padding: 20px 0;
+        .menu-anchor {
+          font-size: 24px;
+          font-weight: 600;
+          color: #777;
+        }
+        &.active {
+          .menu-anchor {
+            @include color(color, brand2);
+          }
+        }
+      }
+    }
+    .content {
+      grid-area: content;
+      .title-wrap {
+        h3 {
+          font-size: 32px;
+          font-weight: 700;
+          color: #333;
+        }
       }
     }
   }

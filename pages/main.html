@@ -6,10 +6,10 @@
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/plugins.min.js"></script>
     <link rel="stylesheet" href="../css/main.css" />
-    <title>Document</title>
+    <title>함께학교 - main</title>
   </head>
   <body>
-    <div id="container" class="container">
+    <div id="wrapper" class="wrapper">
       <div class="accessibility">
         <a href="#n">본문 바로가기</a>
       </div>
@@ -25,7 +25,7 @@
         <button type="button" class="close">닫기</button>
       </div>
       <header class="header" id="header"></header>
-      <main class="content" id="content">
+      <main class="container" id="container">
         <section class="sec1">
           <div class="wrap">
             <article class="tabs">
@@ -296,55 +296,12 @@
         </section>
       </main>
       <footer class="footer" id="footer"></footer>
-      <div class="quick-menu">
-        <div class="quick-wrap">
-          <button type="button" class="fold-btn">
-            Quick Link
-            <span>
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                stroke-width="0"
-                viewBox="0 0 512 512"
-                height="200px"
-                width="200px"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"
-                ></path>
-              </svg>
-            </span>
-          </button>
-          <ul class="quick-list">
-            <li class="quick-item">
-              <a href="" class="quick-anchor" target="_blank" title="새창"
-                >학부모 즐겨찾기</a
-              >
-            </li>
-            <li class="quick-item">
-              <a href="" class="quick-anchor" target="_blank" title="새창"
-                >늘봄학교</a
-              >
-            </li>
-            <li class="quick-item">
-              <a href="" class="quick-anchor" target="_blank" title="새창"
-                >지식샘터</a
-              >
-            </li>
-            <li class="quick-item">
-              <a href="" class="quick-anchor" target="_blank" title="새창"
-                >함께차담회</a
-              >
-            </li>
-          </ul>
-        </div>
-        <button type="button" class="top-btn">TOP</button>
-      </div>
+      <div class="quick-menu"></div>
     </div>
     <script>
       $(".header").load("./includes/header.html");
       $(".footer").load("./includes/footer.html");
+      $(".quick-menu").load("./includes/quick-menu.html");
     </script>
     <script src="../js/common.js"></script>
     <script src="../js/layout.js"></script>

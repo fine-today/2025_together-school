@@ -1,9 +1,5 @@
 @use "./_mixin" as *;
 
-.container {
-  display: grid;
-  grid-template-areas: "header-banner" "header" "footer";
-}
 .header-banner {
   grid-area: header-banner;
   height: 90px;
@@ -116,6 +112,12 @@
 }
 
 @include only-pc {
+  .main {
+    .wrapper {
+      display: grid;
+      grid-template-areas: "header-banner" "header" "footer";
+    }
+  }
   .menu-box {
     flex-wrap: wrap;
     .menu-btn {
@@ -254,7 +256,7 @@
     }
   }
 }
-.content {
+.container {
   min-height: 100vh;
 }
 
