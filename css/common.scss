@@ -21,8 +21,46 @@
   --c-gray-70: #27292e;
 }
 
-/*============  font-pretendard ============*/
+/*============  font-noto sans ============*/
+
 @font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/noto/NotoSansKR-Light.woff2") format("woff2"),
+    url("../fonts/noto/NotoSansKR-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/noto/NotoSansKR-Regular.woff2") format("woff2"),
+    url("../fonts/noto/NotoSansKR-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/noto/NotoSansKR-Medium.woff2") format("woff2"),
+    url("../fonts/noto/NotoSansKR-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: bold;
+  font-weight: 600;
+  src: url("../fonts/noto/NotoSansKR-Bold.woff2") format("woff2"),
+    url("../fonts/noto/NotoSansKR-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/noto/NotoSansKR-Black.woff2") format("woff2"),
+    url("../fonts/noto/NotoSansKR-Black.woff") format("woff");
+}
+
+/*============  font-pretendard ============*/
+/*@font-face {
   font-family: "Pretendard";
   font-weight: 900;
   font-display: swap;
@@ -84,7 +122,7 @@
     url(../fonts/pretendard/Pretendard-ExtraLight.subset.woff2) format("woff2"),
     url(../fonts/pretendard/retendard-ExtraLight.subset.woff) format("woff");
 }
-
+*/
 /*=========== default(함께학교 동일) =============*/
 
 html {
@@ -522,8 +560,8 @@ li {
 
 html,
 body {
-  font-family: "pretendard", "NotoKr", "Malgun Gothic", "맑은 고딕", Dotum,
-    "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
+  font-family: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "돋움", "Dotum",
+    "AppleGothic", sans-serif;
   font-size: 10px;
   margin: 0;
   padding: 0;

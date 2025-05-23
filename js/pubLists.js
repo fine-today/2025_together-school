@@ -14,7 +14,7 @@ var PubLists = [
     title: "가이드",
     elem: [
       {
-        id: "guide",
+        id: "pubList",
         name: "기본정책",
         type: "page",
         design: "없음", //"대기 | 진행중 | 완료 | 없음"
@@ -28,7 +28,7 @@ var PubLists = [
         name: "컴포넌트",
         type: "page",
         design: "없음", //"대기 | 진행중 | 완료 | 없음"
-        address: "./pages/guide/guide.html",
+        address: "./pages/sub.html?key=guide",
         pub: "대기", //"대기 | 진행중 | 완료"
         completeDate: "2025-01-00",
         etc: [""],
@@ -56,6 +56,32 @@ var PubLists = [
         design: "대기", //"대기 | 진행중 | 완료 | 없음"
         pub: "대기", //"대기 | 진행중 | 완료"
         address: "./pages/main.html",
+        completeDate: "2025-01-00",
+        etc: [""],
+      },
+      {
+        id: "sub",
+        name: "서브 레이아웃",
+        type: "layout",
+        design: "대기", //"대기 | 진행중 | 완료 | 없음"
+        pub: "대기", //"대기 | 진행중 | 완료"
+        address: "./pages/sub.html",
+        completeDate: "2025-01-00",
+        etc: [""],
+      },
+    ],
+  },
+  {
+    category: "policyProposal",
+    title: "정책제안",
+    elem: [
+      {
+        id: "policyProposal",
+        name: "정책제안 > 정책제안",
+        type: "program + board",
+        design: "대기", //"대기 | 진행중 | 완료 | 없음"
+        pub: "대기", //"대기 | 진행중 | 완료"
+        address: "./pages/sub.html?key=policyProposal",
         completeDate: "2025-01-00",
         etc: [""],
       },

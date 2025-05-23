@@ -201,7 +201,7 @@
       > .wrap {
         display: grid;
         grid-template-areas: "search-box search-box" "side-menu content";
-        grid-template-columns: 200px 1fr;
+        grid-template-columns: auto 1fr;
         grid-template-rows: auto 1fr;
         grid-gap: 40px 50px;
       }
@@ -279,6 +279,7 @@
     }
     .side-menu {
       grid-area: side-menu;
+      width: 200px;
       .side-wrap {
       }
       .side-title {

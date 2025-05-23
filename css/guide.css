@@ -1862,11 +1862,11 @@ body[data-theme=mode1] .input.btn input[type=checkbox] + label {
   display: none;
 }
 .input.btn input[type=checkbox]:checked + label {
-  background-color: #03096e;
+  background-color: #000a6b;
   color: #fff;
 }
 body[data-theme=dark] .input.btn input[type=checkbox]:checked + label {
-  background-color: #01b68d;
+  background-color: #00b58a;
 }
 
 body[data-theme=mode1] .input.btn input[type=checkbox]:checked + label {

@@ -202,7 +202,7 @@
             <nav class="side-menu">side-menu</nav>
             <div class="content" id="content">
               <div class="title-wrap">
-                <h3>정책알림</h3>
+                <h３>정책알림</h３>
               </div>
             </div>
           </div>
@@ -220,5 +220,26 @@
     <script src="../js/common.js"></script>
     <script src="../js/layout.js"></script>
     <script src="../js/sub.js"></script>
+
+    <script>
+      $(function () {
+        function getParameterByName(name) {
+          name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+          return results === null
+            ? ""
+            : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+        var menukey = getParameterByName("key");
+        $.ajax({
+          url: "./contents/" + menukey + ".html",
+          success: function (data) {
+            $("#wrapper").attr("class", "page-" + menukey);
+            $(".content-box > .wrap").html(data);
+          },
+        });
+      });
+    </script>
   </body>
 </html>
