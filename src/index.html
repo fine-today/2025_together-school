@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/pub-list.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="header">
+      <!-- <div class="btn-wrap"></div> -->
+      <a href="/" class="logo">
+        <img src="./images/common/logo-ani.gif" alt="" style="width: 100px"
+      /></a>
+      <!-- <div class="check-wrap">
+        <span class="input">
+          <input type="checkbox" id="check1" />
+          <label for="check1">디자인 완료일</label>
+        </span>
+        <span class="input">
+          <input type="checkbox" id="check2" />
+          <label for="check2">개발주소</label>
+        </span>
+        <span class="input">
+          <input type="checkbox" id="check3" />
+          <label for="check3">퍼블 완료일</label>
+        </span>
+      </div> -->
+
+      <div class="guide-icons">
+        <ul class="guide-icon-list">
+          <li class="icon-item" data-status="folder-open">
+            <i></i> <span class="label">카테고리 열림</span>
+          </li>
+          <li class="icon-item" data-status="folder-close">
+            <i></i> <span class="label">카테고리 닫힘</span>
+          </li>
+          <li class="icon-item" data-status="empty">
+            <i></i> <span class="label">진행 대기</span>
+          </li>
+          <li class="icon-item" data-status="loading">
+            <i></i> <span class="label">진행중</span>
+          </li>
+          <li class="icon-item" data-status="colmplete">
+            <i></i> <span class="label">완료</span>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="guide-wrap">
+      <div class="guide-list-wrap">
+        <div class="tree-ctrl">
+          <button type="button" class="tree-btn" data-status="close">
+            <i></i>
+            전체 닫힘
+          </button>
+          <button type="button" class="tree-btn" data-status="open">
+            <i></i>
+            전체 열림
+          </button>
+        </div>
+      </div>
+      <div class="guide-view-wrap">
+        <div class="view-info">
+          <table>
+            <colgroup>
+              <col style="width: 10%" />
+              <col style="width: 40%" />
+              <col style="width: 10%" />
+              <col style="width: auto" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>메뉴명</th>
+                <td class="menu-name"></td>
+                <th>타입</th>
+                <td class="menu-type"></td>
+              </tr>
+              <tr>
+                <th>비고</th>
+                <td colspan="3" class="menu-comment"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="view-list">
+          <button
+            type="button"
+            class="view-btn"
+            data-width="344"
+            data-height="802"
+          >
+            344*802
+          </button>
+          <button
+            type="button"
+            class="view-btn"
+            data-width="360"
+            data-height="640"
+          >
+            360*640
+          </button>
+          <button
+            type="button"
+            class="view-btn"
+            data-width="480"
+            data-height="640"
+          >
+            480*640
+          </button>
+          <button
+            type="button"
+            class="view-btn"
+            data-width="520"
+            data-height="768"
+          >
+            520*768
+          </button>
+          <button
+            type="button"
+            class="view-btn"
+            data-width="640"
+            data-height="800"
+          >
+            640*800
+          </button>
+          <button
+            type="button"
+            class="view-btn"
+            data-width="767"
+            data-height="800"
+          >
+            767*800
+          </button>
+          <button
+            type="button"
+            class="view-btn"
+            data-width="768"
+            data-height="1024"
+          >
+            768*1024
+          </button>
+          <button
+            type="button"
+            class="view-btn"
+            data-width="980"
+            data-height="1024"
+          >
+            980*1024
+          </button>
+          <button
+            type="button"
+            class="view-btn"
+            data-width="981"
+            data-height="1140"
+          >
+            981*1140
+          </button>
+          <button
+            type="button"
+            class="view-btn"
+            data-width="1140"
+            data-height="980"
+          >
+            1140*980
+          </button>
+          <button
+            type="button"
+            class="view-btn active"
+            data-width="1280"
+            data-height="900"
+          >
+            1280*900
+          </button>
+          <button
+            type="button"
+            class="view-btn"
+            data-width="1902"
+            data-height="900"
+          >
+            1902*900
+          </button>
+        </div>
+        <div class="viewer">
+          <iframe
+            src="./pages/guide/policy.html"
+            frameborder="0"
+            id="pub-viewer"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div id="mode">
+      <button type="button" class="mode-btn" data-mode="default">
+        DEFAULT
+      </button>
+      <button type="button" class="mode-btn" data-mode="dark">DARK</button>
+      <button type="button" class="mode-btn" data-mode="mode1">MODE1</button>
+      <!--<button type="button" class="mode-btn" data-mode="mode2">MODE2</button>
+      <button type="button" class="mode-btn" data-mode="mode3">MODE3</button>-->
+    </div>
+
+    <script>
+      $(".mode-btn").on("click", function () {
+        var $this = $(this);
+        $this.addClass("active").siblings().removeClass("active");
+        $("body").attr("data-theme", $this.attr("data-mode"));
+      });
+    </script>
+
+    <script src="./js/pubLists.js"></script>
+  </body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko" class="sub">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/plugins.min.js"></script>
+    <link rel="stylesheet" href="../css/sub.css" />
+    <title>함께학교 -sub</title>
+  </head>
+  <body>
+    <div id="wrapper" class="wrapper">
+      <div class="accessibility">
+        <a href="#n">본문 바로가기</a>
+      </div>
+
+      <header class="header" id="header"></header>
+      <main class="container" id="container">
+        <header class="sub-header">
+          <div class="breadcrumb-box">
+            <div class="wrap">
+              <ol class="breadcrumb-list">
+                <li class="breadcumb-item home">
+                  <a
+                    href="./main.html"
+                    class="breadcrumb-anchor"
+                    title="홈으로"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      height="200px"
+                      width="200px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M208 448V320h96v128h97.6V256H464L256 64 48 256h62.4v192z"
+                      ></path>
+                    </svg>
+                  </a>
+                </li>
+                <li class="breadcumb-item depth1">
+                  <a href="#n" class="breadcrumb-anchor">정책제안</a>
+                </li>
+                <li class="breadcumb-item depth2">
+                  <button
+                    type="button"
+                    class="breadcrumb-btn"
+                    data-pop="breadcumb"
+                  >
+                    정책제안
+                    <i class="arrow"
+                      ><svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 512 512"
+                        height="20px"
+                        width="20px"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"
+                        ></path>
+                      </svg>
+                    </i>
+                  </button>
+                  <div class="breadcrumb-panel" data-panel="breadcumb">
+                    <div class="breadcrumb-panel-wrap">
+                      <ul class="panel-list">
+                        <li class="panel-item">
+                          <a href="#n" class="panel-anchor">정책제안</a>
+                        </li>
+                        <li class="panel-item">
+                          <a href="#n" class="panel-anchor">정책토론</a>
+                        </li>
+                        <li class="panel-item">
+                          <a href="#n" class="panel-anchor">정책답변</a>
+                        </li>
+                        <li class="panel-item">
+                          <a href="#n" class="panel-anchor">정책실현</a>
+                        </li>
+                        <li class="panel-item">
+                          <a href="#n" class="panel-anchor">차담회</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="sub-visual">
+            <div class="wrap">
+              <h2 class="title">정책제안</h2>
+              <p>교육정책에 대한 의견을 개진하고 소통하는 공간입니다.</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="content-box">
+          <div class="wrap">
+            <div class="search-box">
+              <div class="wrap">
+                <h3 class="hidden">검색하기</h3>
+                <div class="search-box-wrap">
+                  <div class="search-form">
+                    <div class="input">
+                      <select name="" id="">
+                        <option value="1">제목</option>
+                        <option value="1">내용</option>
+                        <option value="1">키워드</option>
+                      </select>
+                    </div>
+                    <div class="input">
+                      <input type="text" />
+                      <button type="button" class="search-btn" title="검색">
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 512 512"
+                          height="20px"
+                          width="20px"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill="none"
+                            stroke-miterlimit="10"
+                            stroke-width="32"
+                            d="M221.09 64a157.09 157.09 0 1 0 157.09 157.09A157.1 157.1 0 0 0 221.09 64z"
+                          ></path>
+                          <path
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-miterlimit="10"
+                            stroke-width="32"
+                            d="M338.29 338.29 448 448"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn icon"
+                      data-pop="search-detail"
+                      title="옵션 더보기"
+                    >
+                      <svg
+                        stroke="currentColor"
+                        fill="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 512 512"
+                        height="20px"
+                        width="20px"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"
+                        ></path>
+                      </svg>
+                    </button>
+                    <button type="button" class="btn large">통합검색</button>
+                  </div>
+                  <div class="search-keyword">
+                    <button type="button" class="keyword">#학급당인원</button>
+                    <button type="button" class="keyword">#학교 선택권</button>
+                    <button type="button" class="keyword">#지역 불균형</button>
+                    <button type="button" class="keyword">#통학권 배정</button>
+                    <button type="button" class="keyword">#쏠림 현상</button>
+                  </div>
+                  <div class="search-detail" data-panel="search-detail">
+                    <div class="search-detail-wrap">
+                      <h4 class="title">등록자</h4>
+                      <span class="input btn">
+                        <input type="checkbox" id="check01-1" />
+                        <label for="check01-1">전체</label>
+                      </span>
+                      <span class="input btn">
+                        <input type="checkbox" id="check01-2" />
+                        <label for="check01-2">학생</label>
+                      </span>
+                      <span class="input btn">
+                        <input type="checkbox" id="check01-3" />
+                        <label for="check01-3">학부모</label>
+                      </span>
+                      <span class="input btn">
+                        <input type="checkbox" id="check01-4" />
+                        <label for="check01-4">교원</label>
+                      </span>
+                      <span class="input btn">
+                        <input type="checkbox" id="check01-5" />
+                        <label for="check01-5">일반</label>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <nav class="side-menu">side-menu</nav>
+            <div class="content" id="content">
+              <div class="title-wrap">
+                <h３>정책알림</h３>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer" id="footer"></footer>
+      <div class="quick-menu"></div>
+    </div>
+    <script>
+      $(".header").load("./includes/header.html");
+      $(".footer").load("./includes/footer.html");
+      $(".quick-menu").load("./includes/quick-menu.html");
+      $(".side-menu").load("./includes/side.html");
+    </script>
+    <script src="../js/common.js"></script>
+    <script src="../js/layout.js"></script>
+    <script src="../js/sub.js"></script>
+
+    <script>
+      $(function () {
+        function getParameterByName(name) {
+          name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+          return results === null
+            ? ""
+            : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+        var menukey = getParameterByName("key");
+        $.ajax({
+          url: "./contents/" + menukey + ".html",
+          success: function (data) {
+            $("#wrapper").attr("class", "page-" + menukey);
+            $(".content-box > .wrap").html(data);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
